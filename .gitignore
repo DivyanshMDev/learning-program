@@ -10,3 +10,5 @@ obj/
 *.cache
 *.log
 *.vsix
+*.userprefs
+packages/
