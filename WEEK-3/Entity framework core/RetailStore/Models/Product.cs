@@ -1,20 +1,11 @@
-using RetailStore;
-using RetailStore.Models;
-
-namespace RetailStore
+namespace RetailStore.Models
 {
-    class Program
+    public class Product
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("=== Lab 2: Database Context Setup ===");
-            Console.WriteLine("DbContext configured successfully!");
-
-            using (var context = new AppDbContext())
-            {
-                Console.WriteLine("Database connection established.");
-                Console.WriteLine("Ready for Lab 3 migrations!");
-            }
-        }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }
