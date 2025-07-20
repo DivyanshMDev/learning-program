@@ -49,7 +49,7 @@ namespace JwtAuthMicroservice.Controllers
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(int.Parse(_configuration["Jwt:DurationInMinutes"] ?? "60")),
+                expires: DateTime.Now.AddMinutes(1), // Change to 1 minute for testing
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
